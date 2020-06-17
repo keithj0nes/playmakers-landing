@@ -1,0 +1,8 @@
+{
+    "name": "Playmaker-Leagues-Heroku",
+    "version": "1.0.0",
+    "description": "Playmaker Leagues Heroku",
+    "dependencies": {
+      "harp": "*"
+    }
+  }
