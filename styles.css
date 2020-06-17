@@ -1,0 +1,181 @@
+:root {
+    --heading-font: 'Oswald', sans-serif;
+    --main-font: 'Open Sans', sans-serif;
+    --white: #ffffff;
+    --black: #03111C;
+    --gold: #DAC595;
+    --teal: #13586E;
+    --gray: #AAAAAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+}
+
+p, li {
+    font-family: var(--main-font);
+}
+
+ul {
+    margin-left: 20px;
+}
+
+
+
+.master-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+    height: 48px;
+    width: 100%;
+    /* background: rgba(0,0,0,0.5); */
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    height: 30px;
+    width: 30px;
+    background: white;
+}
+
+
+/*****
+    HERO 
+*****/
+
+.hero {
+    /* height: 100vh; */
+    width: 100vw;
+    background: teal;
+    padding: 48px 20px;
+}
+
+.hero h3, footer h3 {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: var(--gold);
+}
+
+.hero h1, footer h1 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    color: var(--white);
+    padding: 5px 0;
+}
+
+.hero p, footer p {
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--gold);
+    border-left: 2px solid var(--gold);
+    padding-left: 12px;
+    margin-top: 10px;
+}
+
+/*****
+    FOOTER  |  shares styles with .hero class above
+*****/
+
+footer {
+    /* height: 100vh; */
+    width: 100vw;
+    background: var(--black);
+    padding: 30px 20px;
+}
+
+footer input {
+    padding: 10px 14px;
+    width: 100%;
+    font-size: 12px;
+    margin: 30px 0;
+}
+
+footer .copy {
+    font-size: 10px;
+    color: var(--gray);
+    text-align: center;
+    padding: 6px 0;
+    border: none;
+    line-height: 10px;
+    margin: 0;
+}
+
+/*****
+    CARD 
+*****/
+
+main {
+    padding: 48px 20px;
+}
+
+.card {
+    /* background: lightblue; */
+    padding-bottom: 60px;
+}
+
+.card:last-child {
+    padding-bottom: 0;
+}
+
+.card-description {
+    padding-bottom: 40px;
+}
+
+.card-description h1 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    color: var(--black);
+}
+
+.card-description p, .card-description li {
+    font-size: 14px;
+    line-height: 32px;
+    padding-top: 6px;
+    color: var(--gray);
+}
+
+.card-description li {
+    padding: 8px 0;
+}
+
+.browser {
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    /* margin: 20px; */
+    border-top: 32px solid rgba(200, 200, 200, 0.6);
+}
+
+.browser:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -20px;
+    left: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #FF544D;
+    box-shadow: 0 0 0 2px #FF544D, 24px 0 0 2px #FFB62A, 48px 0 0 2px #24C339;
+}
+
+.card-image .fake-image {
+    background-color: turquoise;
+    height: 200px;
+    width: 100%;
+}
