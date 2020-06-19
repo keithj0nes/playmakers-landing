@@ -6,14 +6,31 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400&display=swap" rel="stylesheet">
     <title>Playmaker Leagues</title>
+
+
+    <!-- OpenGraph tags -->
+    <!-- <meta name="og:url" content={url} /> -->
+    <meta name="og:title" content="Playmaker Leagues" />
+    <meta name="og:description" content="Playmaker Leagues specializes in sports league management" />
+    <!-- <meta name="og:image" content={image} /> -->
+    <meta name="og:type" content="website" />
+    <!-- <meta name="fb:app_id" content={facebook.appId} /> -->
+    <!-- Twitter Card tags -->
+    <meta name="twitter:title" content="Playmaker Leagues" />
+    <meta name="twitter:description" ccontent="Playmaker Leagues specializes in sports league management"/>
+    <!-- <meta name="twitter:image" content={image} /> -->
+    <!-- <meta name="twitter:card" content="summary" /> -->
+    <!-- <meta
+        name="twitter:creator"
+        content={config.authorTwitterAccount ? config.authorTwitterAccount : ""}
+    /> -->
+  
 </head>
 <body>
 
     <div class="master-container">
         <header>
             <div class="max-container">
-
-                <!-- <div class="logo"></div> -->
                 <h1>Playmaker<span>Leagues</span></h1>
             </div>
         </header>
@@ -108,11 +125,49 @@
                     <div>
                         <h3>Secure Your Spot And</h3>
                         <h1>Sign Me Up <br class="br-footer-h1"> Coach!</h1>
-                        <p>Enter your email and we’ll be sure to give you a roster spot. Once Playmaker Leagues launches, we’ll be sure to let you know!</p>
+                        <p>Enter your email and we’ll be sure to give you a roster spot. Once Playmaker Leagues launches, you'll be the first to know!</p>
                     </div>
-                    <form class="sign-me-up-input">
-                        <input type="text" placeholder="Enter your email address">
-                        <button>Sign Up</button>
+                    <form class="sign-me-up">
+
+                        <h3>Select your Sport(s)</h3>
+
+                        <div class="checkbox-field">
+                            <label class="checkbox-container">Hockey
+                                <input type="checkbox" id="hockey">
+                                <span class="checkmark"></span>
+                            </label>
+                                
+                            <label class="checkbox-container">Baseball
+                                <input type="checkbox" id="baseball">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">Basketball
+                                <input type="checkbox" id="basketball">
+                                <span class="checkmark"></span>
+                            </label>
+                                
+                            <label class="checkbox-container">Lacrosse
+                                <input type="checkbox" id="lacrosse">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">Kickball
+                                <input type="checkbox" id="kickball">
+                                <span class="checkmark"></span>
+                            </label>
+                                
+                            <label class="checkbox-container">Other
+                                <input type="checkbox" id="other">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+
+                        <div class="input-button">
+                            <input type="text" placeholder="Enter your email address">
+                            <button>Sign Up</button>
+                        </div>
                     </form>
                 </div>
 
