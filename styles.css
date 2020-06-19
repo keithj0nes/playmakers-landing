@@ -5,7 +5,7 @@
     --black: #03111C;
     --gold: #DAC595;
     --teal: #13586E;
-    --gray: #919191;
+    --gray: #6B6B6B;
 }
 
 * {
@@ -37,6 +37,10 @@ ul {
     height: 100%;
     width: 100%;
 }
+
+/*****
+    HEADER 
+*****/
 
 
 header {
@@ -78,6 +82,9 @@ header h1 span {
     padding: 48px 20px;
     background-image: url('./assets/images/Image.png');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
     position: relative;
 }
@@ -103,6 +110,8 @@ header h1 span {
     border-left: 2px solid var(--gold);
     padding-left: 12px;
     margin-top: 10px;
+    max-width: 400px;
+
 }
 
 .hero .launch-date {
@@ -110,15 +119,16 @@ header h1 span {
     /* width: 20px; */
     background-color: var(--teal);
     position: absolute;
-    bottom: -20px;
+    /* bottom: -20px; */
+    bottom: -35px;
     /* left: 50%; */
     left: 30px;
     /* transform: translateX(-50%); */
-    height: 40px;
+    height: 60px;
     animation: launch-date-slide 1.5s forwards;
     display: flex;
     align-items: center;
-    padding-left: 12px;
+    padding-left: 16px;
 }
 
 .hero .launch-date h3 {
@@ -170,25 +180,51 @@ footer .copy {
     margin: 0;
 }
 
+footer button {
+    border: none;
+    /* border-radius: 2px; */
+    padding: 10px 14px;
+    font-size: 12px;
+    background: var(--gold);
+    color: var(--black);
+    cursor: pointer;
+}
+
+footer button:hover {
+    opacity: 0.8;
+}
+
+footer .sign-me-up-input {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.br-footer-h1 {
+    display: none;
+}
+
 /*****
     CARD 
 *****/
 
 main {
-    padding: 48px 20px;
+    padding: 68px 20px 48px;
 }
 
 .card {
     /* background: lightblue; */
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
+    padding: 20px 0 60px;
 }
 
-.card:last-child {
+/* .card:last-child {
     padding-bottom: 0;
-}
+} */
 
 .card-description {
     padding-bottom: 40px;
+    /* padding: 50px 0 50px; */
 }
 
 .card-description h1 {
@@ -234,4 +270,188 @@ main {
     background-color: turquoise;
     height: 200px;
     width: 100%;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+
+    .max-container {
+        /* width: 1088px; */
+        width: 100%;
+        max-width: 900px;
+        /* border-left: 2px solid red;
+        border-right: 2px solid red; */
+        margin: 0 auto;
+    }
+
+    /*****
+        HEADER 
+    *****/
+
+
+    header {
+        height: 74px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+
+
+    /*****
+        HERO 
+    *****/
+
+    .hero {
+        height: 75vh;
+        background-image: url('./assets/images/Image@2x.png');
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h3, footer h3 {
+        font-size: 16px;
+        /* letter-spacing: 1.2px; */
+        /* color: var(--gold); */
+    }
+
+    .hero h1, footer h1 {
+        font-size: 70px;
+        letter-spacing: 7.8px;
+        line-height: 78px;
+        /* color: var(--white);
+        padding: 5px 0; */
+    }
+
+    .hero p, footer p {
+        font-size: 16px;
+        /* line-height: 24px;
+        color: var(--gold);
+        border-left: 2px solid var(--gold); */
+        /* padding-left: 12px; */
+        margin-top: 20px;
+    }
+
+    .hero .launch-date {
+        /* width: calc(100% - 60px); */
+        /* width: 20px !important; */
+        width: 100%;
+        padding: 0;
+        /* background-color: var(--teal); */
+        position: absolute;
+        /* position: relative; */
+        /* bottom: -20px; */
+        bottom: -35px;
+        left: auto;
+        /* left: 50%; */
+        /* left: 30px; */
+        /* transform: translateX(-50%); */
+        height: 60px;
+        animation: launch-date-slide 1.5s forwards;
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+    }
+
+    .hero .launch-date h3 {
+        /* color: var(--white); */
+        font-size: 32px;
+        line-height: 19px;
+        /* display: none; */
+        opacity: 0;
+        animation: launch-date-fade-in 1.5s forwards;
+        animation-delay: 0.75s;
+    }
+
+
+    @keyframes launch-date-slide { 
+        0%   { width: 20px } 
+        100% { width: 400px } 
+    } 
+
+
+
+
+
+    /*****
+        CARD 
+    *****/
+
+
+    .card {
+        /* background-color: pink; */
+        padding: 40px 0 90px;
+
+    }
+
+    .card > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        /* width: 100%; */
+    }
+
+    .card > div:first-child > div {
+        width: 48%;
+        /* background: green; */
+    }
+
+    .card.reverse > div:first-child {
+        flex-direction: row-reverse;
+    }
+
+
+
+    /*****
+        FOOTER  |  shares styles with .hero class above
+    *****/
+
+    footer .sign-me-up-container {
+        display: flex;
+    }
+
+    footer .sign-me-up-container > div,
+    footer .sign-me-up-container > form {
+        width: 50%;
+    }
+
+
+    footer input {
+        padding: 10px 14px;
+        width: 100%;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+
+    footer button {
+        align-self: flex-end;
+        font-size: 20px;
+    }
+
+    footer .sign-me-up-input {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        /* width: 25% !important; */
+        height: 100%;
+    }
+
+    footer .copy {
+        max-width: 100%;
+    }
+
+
+
+    .br-footer-h1 {
+        display: block;
+    }
+
 }
