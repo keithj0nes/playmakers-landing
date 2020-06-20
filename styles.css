@@ -290,6 +290,8 @@ main {
 footer form.sign-me-up {
     /* background: teal; */
     padding: 20px 0;
+    transition: opacity 0.25s ease-in;
+
 }
 
 
@@ -301,7 +303,7 @@ footer form.sign-me-up {
 .checkbox-container {
     color: var(--white);
     display: flex;
-    flex: 1;
+    flex: 1 1 160px;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
@@ -373,6 +375,10 @@ footer form.sign-me-up {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  .form-success {
+      display: none;
   }
 
 
