@@ -166,7 +166,7 @@ footer {
 footer input {
     padding: 10px 14px;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     /* margin: 30px 0; */
     margin-bottom: 20px;
 }
@@ -198,11 +198,41 @@ footer button:hover {
     opacity: 0.8;
 }
 
+footer .sign-me-up-container {
+    position: relative;
+}
+
 footer .sign-me-up-input {
     display: flex;
     align-self: center;
     flex-direction: column;
 }
+
+footer .input-button {
+    position: relative;
+}
+
+.invalid-email {
+    /* color: #ff0033; */
+    color: var(--gold);
+    border: none;
+    display: none;
+    position: absolute;
+    top: -40px;
+    font-size: 14px;
+}
+
+.invalid-email.show {
+    display: block;
+}
+
+.invalid-email.show + input {
+    /* border: 2px solid #ff0033; */
+    /* border: 2px solid var(--gold); */
+
+}
+
+
 
 .br-footer-h1 {
     display: none;
@@ -294,6 +324,10 @@ footer form.sign-me-up {
 
 }
 
+form.sign-me-up.hide {
+    transform: translateX(-100000px);
+}
+
 
     /*****
         CHECKBOXES 
@@ -379,12 +413,15 @@ footer form.sign-me-up {
 
   .form-success {
       display: none;
+      position: absolute;
+      top: 50%;
   }
 
 
 
 
 @media only screen and (min-width: 768px) {
+
 
 
     .max-container {
@@ -558,12 +595,30 @@ footer form.sign-me-up {
         height: 100%;
     }
 
+    form.sign-me-up.hide {
+        display: none;
+    }
+
+    .invalid-email {
+        top: -50px;
+        color: var(--gold);
+        border-bottom: 2px solid var(--gold);
+        padding: 0px 20px;
+    }
+    
+    
+
     footer .copy {
         max-width: 100%;
     }
 
     .br-footer-h1 {
         display: block;
+    }
+
+    .form-success {
+        display: none;
+        position: relative;
     }
 
 }
