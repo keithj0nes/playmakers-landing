@@ -55,6 +55,7 @@ CHECKBOX_DATA.forEach(data => {
 
 function handleSubmit(e) {
     e.preventDefault();
+    invalidEmail.classList.remove('show');
 
     // check email validation
     const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

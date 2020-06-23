@@ -212,24 +212,31 @@ footer .input-button {
     position: relative;
 }
 
-.invalid-email {
-    /* color: #ff0033; */
-    color: var(--gold);
-    border: none;
-    display: none;
+footer .invalid-email {
+    color: #FF0000;
+    width: 100%;
+    background: yellow;
+    border: 1px solid #FF0000;
+    background: #FFCCCC;
+    padding: 6px 10px;
     position: absolute;
-    top: -40px;
-    font-size: 14px;
+    bottom: 102%;
+    text-align: center;
+    display: none;
+    opacity: 0;
 }
 
-.invalid-email.show {
+footer .invalid-email h3, footer .invalid-email p {
+    color: #FF0000;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+
+footer .invalid-email.show {
+    animation: launch-date-fade-in 0.35s forwards;
     display: block;
-}
-
-.invalid-email.show + input {
-    /* border: 2px solid #ff0033; */
-    /* border: 2px solid var(--gold); */
-
 }
 
 
@@ -599,13 +606,17 @@ form.sign-me-up.hide {
         display: none;
     }
 
-    .invalid-email {
-        top: -50px;
-        color: var(--gold);
+    footer .invalid-email {
+        /* top: -50px; */
+        bottom: 106%;
+        /* color: var(--gold);
         border-bottom: 2px solid var(--gold);
-        padding: 0px 20px;
+        padding: 0px 20px; */
     }
     
+    footer .invalid-email p {
+        font-size: 14px;
+    }
     
 
     footer .copy {
